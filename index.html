@@ -8,7 +8,7 @@
     <title>Random Backgrounds</title>
 </head>
 <body>
-    <div>
+    <div id="mainBar">
         <input type="button" value="Generate Background" onclick="genBackground()">
         <input type="button" value="Generate Gradient" onclick="genGradient()">
         <input type="button" value="Generate Triple Gradient" onclick="genTripleGradient()">
@@ -17,17 +17,20 @@
 
     <script>
         var mode = true;
-        changeMode();
+        changeMode()
     
         function changeMode() {
             if (mode) {
                 document.getElementById("mainBar").style.display = "flex"
-                document.getElementById("arrow").className = "closingArrow"
+                document.getElementById("arrow").classList.remove("openingArrow");
+                document.getElementById("arrow").classList.add("closingArrow");
             }
     
             else {
                 document.getElementById("mainBar").style.display = "none"
-                document.getElementById("arrow").className = "openingArrow"
+                document.getElementById("arrow").classList.remove("closingArrow");
+                document.getElementById("arrow").classList.add("openingArrow");
+
             }
     
             mode = !mode
