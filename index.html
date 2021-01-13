@@ -17,20 +17,21 @@
 
     <script>
         var mode = true;
-        changeMode()
+        changeMode();
     
         function changeMode() {
             if (mode) {
-                document.getElementById("mainBar").style.display = "flex"
-                document.getElementById("arrow").classList.remove("openingArrow");
-                document.getElementById("arrow").classList.add("closingArrow");
+                document.getElementById("mainBar").classList.remove("hide")
+                document.getElementById("arrow").classList.remove("openingArrow")
+                document.getElementById("mainBar").classList.add("flex")
+                document.getElementById("arrow").classList.add("closingArrow")
             }
     
             else {
-                document.getElementById("mainBar").style.display = "none"
-                document.getElementById("arrow").classList.remove("closingArrow");
-                document.getElementById("arrow").classList.add("openingArrow");
-
+                document.getElementById("mainBar").classList.remove("flex")
+                document.getElementById("arrow").classList.remove("closingArrow")
+                document.getElementById("mainBar").classList.add("hide")
+                document.getElementById("arrow").classList.add("openingArrow")
             }
     
             mode = !mode
