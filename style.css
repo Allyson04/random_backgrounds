@@ -8,16 +8,20 @@
     display: none;
 }
 
+.flex {
+    display: flex;
+}
+
 body > div {
     border: 1px solid black;
     background: radial-gradient(orange, #FFe500);
     justify-content: space-evenly;
-    display: flex;
-    border-radius: 0 0 20px 20px;
-    -webkit-border-radius: 0 0 20px 20px;
-    -moz-border-radius: 0 0 20px 20px;
-    -ms-border-radius: 0 0 20px 20px;
-    -o-border-radius: 0 0 20px 20px;
+    /*display: flex;
+    */border-radius: 0 0 20p 20px;
+    -webkit-border-radius: 0 0 20p 20px;
+    -moz-border-radius: 0 0 20p 20px;
+    -ms-border-radius: 0 0 20p 20px;
+    -o-border-radius: 0 0 20p 20px;
     -webkit-border-radius: 0 0 20px 20px;
 }
 
@@ -42,6 +46,11 @@ input {
     background: transparent;
     border-color: transparent black black transparent;
     margin: 10px auto;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
 }
 
 .closingArrow {
