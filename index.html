@@ -36,6 +36,15 @@
     
             mode = !mode
         }
+
+        function genBackground() {
+            var randomNumber = (Math.random() * 10000000).toString(16)
+            hue = randomNumber.substr(0, 6)
+            
+            console.log(hue)
+
+            document.body.style.backgroundColor = "#" + hue
+        }
     </script>
 
 </body>
