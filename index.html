@@ -37,14 +37,26 @@
             mode = !mode
         }
 
-        function genBackground() {
-            var randomNumber = (Math.random() * 10000000).toString(16)
-            hue = randomNumber.substr(0, 6)
-            
-            console.log(hue)
 
-            document.body.style.backgroundColor = "#" + hue
+
+        var colorCreator = function () {
+            var randomNumber1 = (Math.random() * 10000000).toString(16)
+            var randomNumber2 = (Math.random() * 10000000).toString(16)
+            var randomNumber3 = (Math.random() * 10000000).toString(16)
+            hue1 = "#" + randomNumber1.substr(0, 6)
+            hue2 = "#" + randomNumber2.substr(0, 6)
+            hue3 = "#" + randomNumber3.substr(0, 6)
+
+            return {hue1, hue2, hue3}
+
         }
+
+        function genBackground() { 
+            colorCreator()   
+
+            document.body.style.backgroundColor = hue1
+        }
+
     </script>
 
 </body>
