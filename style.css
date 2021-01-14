@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100%;
+}
+
 .hide {
-    display: none;
+    /* display: none; */
+   top: -50%;
 }
 
 .flex {
@@ -13,16 +18,24 @@
 }
 
 body > div {
+    width: calc(100% - 2px);
     border: 1px solid black;
     background: radial-gradient(orange, #FFe500);
     justify-content: space-evenly;
-    /*display: flex;
-    */border-radius: 0 0 20p 20px;
+    position: absolute;
+    display: flex;
+    top: 0;
+    border-radius: 0 0 20p 20px;
     -webkit-border-radius: 0 0 20p 20px;
     -moz-border-radius: 0 0 20p 20px;
     -ms-border-radius: 0 0 20p 20px;
     -o-border-radius: 0 0 20p 20px;
     -webkit-border-radius: 0 0 20px 20px;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -ms-transition: top 0.5s;
+    -o-transition: top 0.5s;
 }
 
 input {
@@ -36,6 +49,7 @@ input {
 }
 
 #arrow {
+    position: relative;
     width: 20px;
     height: 20px;
     border-radius: 5px;
@@ -46,14 +60,16 @@ input {
     background: transparent;
     border-color: transparent black black transparent;
     margin: 10px auto;
-    transition: transform 0.5s;
-    -webkit-transition: transform 0.5s;
-    -moz-transition: transform 0.5s;
-    -ms-transition: transform 0.5s;
-    -o-transition: transform 0.5s;
+    transition: transform 0.7s, top 0.7s;
+    -webkit-transition: transform 0.7, top 0.7s;
+    -moz-transition: transform 0.7s, top 0.7s;
+    -ms-transition: transform 0.7s, top 0.7s;
+    -o-transition: transform 0.7s, top 0.7s;
+    -webkit-transition: transform 0.7s, top 0.7s;
 }
 
 .closingArrow {
+    top: 67px;
     transform: rotate(225deg);
     -webkit-transform: rotate(225deg);
     -moz-transform: rotate(225deg);
@@ -62,6 +78,8 @@ input {
 }
 
 .openingArrow {
+    position: absolute;
+    top: 0;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
