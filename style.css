@@ -17,8 +17,13 @@ body {
     display: flex;
 }
 
-body > div {
-    width: calc(100% - 2px);
+#mainBar,
+#arrow {
+    z-index: 1;
+}
+
+body > div { 
+    width: 100%;
     border: 1px solid black;
     background: radial-gradient(orange, #FFe500);
     justify-content: space-evenly;
@@ -49,6 +54,8 @@ input {
 }
 
 #arrow {
+    border: 1px solid black;
+
     position: relative;
     width: 20px;
     height: 20px;
@@ -85,4 +92,19 @@ input {
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
+}
+
+#valueShowBar{
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 0%;
+
+    background: transparent;
+    /* opacity: 40%; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 0;
 }
