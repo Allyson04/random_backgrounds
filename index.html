@@ -16,9 +16,9 @@
     <div id="arrow" class="drop" onclick="changeMode()"></div>
 
     <div id="valueShowBar">
-        <span id="valueShow1"></span>
-        <span id="valueShow2"></span>
-        <span id="valueShow3"></span>
+        <span id="valueShow1" class="hide">lorem</span>
+        <span id="valueShow2" class="hide"></span>
+        <span id="valueShow3" class="hide"></span>
     </div>
 
     <script>
@@ -43,8 +43,6 @@
             mode = !mode
         }
 
-
-
         var colorCreator = function () {
             var randomNumber1 = (Math.random() * 10000000).toString(16)
             var randomNumber2 = (Math.random() * 10000000).toString(16)
@@ -57,16 +55,23 @@
 
         }
 
+        //document.getElementsByTagName("span").classList.add("hide")
+
         function genBackground() { 
             colorCreator()   
 
+            document.getElementById("valueShow1").classList.remove("hide")
+            
             document.getElementById("valueShow1").innerHTML = hue1
+            
             document.body.style.backgroundColor = hue1
         }
 
         function genGradient() { 
             colorCreator()   
 
+            document.getElementById("valueShow1").classList.remove("hide")
+            document.getElementById("valueShow2").classList.remove("hide")
             document.getElementById("valueShow1").innerHTML = hue1
             document.getElementById("valueShow2").innerHTML = hue2
 
@@ -76,6 +81,10 @@
 
         function genTripleGradient() {
             colorCreator()
+
+            document.getElementById("valueShow1").classList.remove("hide")
+            document.getElementById("valueShow2").classList.remove("hide")
+            document.getElementById("valueShow3").classList.remove("hide")
 
             document.getElementById("valueShow1").innerHTML = hue1
             document.getElementById("valueShow2").innerHTML = hue2

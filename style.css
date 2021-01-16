@@ -9,7 +9,6 @@ body {
 }
 
 .topping {
-    /* display: none; */
    top: -50%;
 }
 
@@ -22,7 +21,9 @@ body {
     z-index: 1;
 }
 
-
+.hide {
+    display: none;
+}
 
 /* above this lies mini-classes, using no more than three style
 below lies normal classes */
