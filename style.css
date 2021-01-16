@@ -8,7 +8,7 @@ body {
     height: 100%;
 }
 
-.hide {
+.topping {
     /* display: none; */
    top: -50%;
 }
@@ -21,6 +21,8 @@ body {
 #arrow {
     z-index: 1;
 }
+
+
 
 /* above this lies mini-classes, using no more than three style
 below lies normal classes */
