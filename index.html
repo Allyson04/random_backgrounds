@@ -16,9 +16,9 @@
     <div id="arrow" class="drop" onclick="changeMode()"></div>
 
     <div id="valueShowBar">
-        <span id="valueShow"></span>
-        <span id="valueShow"></span>
-        <span id="valueShow"></span>
+        <span id="valueShow1"></span>
+        <span id="valueShow2"></span>
+        <span id="valueShow3"></span>
     </div>
 
     <script>
@@ -60,11 +60,15 @@
         function genBackground() { 
             colorCreator()   
 
+            document.getElementById("valueShow1").innerHTML = hue1
             document.body.style.backgroundColor = hue1
         }
 
         function genGradient() { 
             colorCreator()   
+
+            document.getElementById("valueShow1").innerHTML = hue1
+            document.getElementById("valueShow2").innerHTML = hue2
 
             document.body.style.background = "linear-gradient(to right, " + hue1 + ", " + hue2 + ")"
 
@@ -72,6 +76,10 @@
 
         function genTripleGradient() {
             colorCreator()
+
+            document.getElementById("valueShow1").innerHTML = hue1
+            document.getElementById("valueShow2").innerHTML = hue2
+            document.getElementById("valueShow3").innerHTML = hue3
 
             document.body.style.background = "linear-gradient(to right," + hue1 + "," + hue2 + "," + hue3 + ")"
         }
