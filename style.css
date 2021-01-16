@@ -22,6 +22,9 @@ body {
     z-index: 1;
 }
 
+/* above this lies mini-classes, using no more than three style
+below lies normal classes */
+
 body > div { 
     width: 100%;
     border: 1px solid black;
@@ -107,4 +110,8 @@ input {
     align-items: center;
 
     z-index: 0;
+}
+
+span {
+
 }
