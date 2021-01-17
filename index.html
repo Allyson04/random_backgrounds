@@ -44,12 +44,12 @@
         }
 
         var colorCreator = function () {
-            var randomNumber1 = (Math.random() * 10000000).toString(16)
-            var randomNumber2 = (Math.random() * 10000000).toString(16)
-            var randomNumber3 = (Math.random() * 10000000).toString(16)
-            hue1 = "#" + randomNumber1.substr(0, 6)
-            hue2 = "#" + randomNumber2.substr(0, 6)
-            hue3 = "#" + randomNumber3.substr(0, 6)
+            var randomNumber1 = Math.random().toString(16).substr(2, 6)
+            var randomNumber2 = Math.random().toString(16).substr(2, 6)
+            var randomNumber3 = Math.random().toString(16).substr(2, 6)
+            hue1 = "#" + randomNumber1
+            hue2 = "#" + randomNumber2
+            hue3 = "#" + randomNumber3
 
             return {hue1, hue2, hue3}
 
@@ -74,6 +74,7 @@
 
             document.getElementById("valueShow1").classList.remove("hide")
             document.getElementById("valueShow2").classList.remove("hide")
+            document.getElementById("valueShow3").classList.add("hide")
             document.getElementById("valueShow1").innerHTML = hue1
             document.getElementById("valueShow2").innerHTML = hue2
 
