@@ -116,5 +116,16 @@ input {
 }
 
 span {
-
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 1px dashed black;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    /*opacity: 50%;*/
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
