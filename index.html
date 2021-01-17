@@ -47,9 +47,9 @@
             var randomNumber1 = Math.random().toString(16).substr(2, 6)
             var randomNumber2 = Math.random().toString(16).substr(2, 6)
             var randomNumber3 = Math.random().toString(16).substr(2, 6)
-            hue1 = "#" + randomNumber1
-            hue2 = "#" + randomNumber2
-            hue3 = "#" + randomNumber3
+            hue1 = ("#" + randomNumber1).toUpperCase()
+            hue2 = ("#" + randomNumber2).toUpperCase()
+            hue3 = ("#" + randomNumber3).toUpperCase()
 
             return {hue1, hue2, hue3}
 
