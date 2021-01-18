@@ -1,0 +1,16 @@
+@media (max-width: 768px){
+    #mainBar {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        justify-content: center;
+}
+
+    input {
+        font-size: 1.3em;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background: rgba(255, 255, 255, 0.7)
+    }
+}
