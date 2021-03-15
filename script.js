@@ -1,31 +1,20 @@
-var mode = true;
-changeMode();
-
 function changeMode() {
-    if (mode) {
-        document.getElementById("mainBar").classList.remove("topping")
-        document.getElementById("arrow").classList.remove("openingArrow")
-        document.getElementById("mainBar").classList.add("flex")
-        document.getElementById("arrow").classList.add("closingArrow")
-    }
+    const GetArrowClass = document.getElementById("arrow").classList
+    const GetMainBarClass = document.getElementById("mainBar").classList
 
-    else {
-        document.getElementById("mainBar").classList.remove("flex")
-        document.getElementById("arrow").classList.remove("closingArrow")
-        document.getElementById("mainBar").classList.add("topping")
-        document.getElementById("arrow").classList.add("openingArrow")
-    }
-
-    mode = !mode
+    GetMainBarClass.toggle("topping")
+    GetArrowClass.toggle("openingArrow")
+    GetMainBarClass.toggle("flex")
+    GetArrowClass.toggle("closingArrow")
 }
 
 var colorCreator = function () {
     var randomNumber1 = Math.random().toString(16).substr(2, 6)
     var randomNumber2 = Math.random().toString(16).substr(2, 6)
     var randomNumber3 = Math.random().toString(16).substr(2, 6)
-    hue1 = ("#" + randomNumber1).toUpperCase()
-    hue2 = ("#" + randomNumber2).toUpperCase()
-    hue3 = ("#" + randomNumber3).toUpperCase()
+    hue1 = "#" + randomNumber1
+    hue2 = "#" + randomNumber2
+    hue3 = "#" + randomNumber3
 
     return {hue1, hue2, hue3}
 

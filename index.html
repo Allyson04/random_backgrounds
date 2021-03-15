@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="resize.css">
     <title>Random Backgrounds</title>
 </head>
 <body>
@@ -14,12 +13,12 @@
         <input type="button" value="Generate Gradient" onclick="genGradient()">
         <input type="button" value="Generate Triple Gradient" onclick="genTripleGradient()">
     </div>
-    <div id="arrow" class="drop" onclick="changeMode()"></div>
+    <div id="arrow" class="drop closingArrow" onclick="changeMode()"></div>
 
     <div id="valueShowBar">
-        <span id="valueShow1" class="hide"></span>
-        <span id="valueShow2" class="hide"></span>
-        <span id="valueShow3" class="hide"></span>
+        <span id="valueShow1"></span>
+        <span id="valueShow2"></span>
+        <span id="valueShow3"></span>
     </div>
 
     <script src="script.js"></script>
