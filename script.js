@@ -9,12 +9,6 @@ function changeMode() {
 }
 
 ColorOptions = {
-    resetColors() {
-        for(i=0; i<3;i++){
-            document.querySelector("#valueShow" + (i+1)).classList.add("hide")
-            console.log("#valueShow" + (i+1))
-        }
-    },
     colorIdentify() {
         let hue = []
 
@@ -23,6 +17,15 @@ ColorOptions = {
         }
     
         return hue
+    }
+}
+
+Layout = {
+    resetColorsDisplay() {
+        for(i=0; i<3;i++){
+            document.querySelector("#valueShow" + (i+1)).classList.add("hide")
+            console.log("#valueShow" + (i+1))
+        }
     }
 }
 
@@ -38,7 +41,7 @@ ColorOptions = {
 function genBackground() { 
     ColorOptions.colorIdentify()   
 
-    ColorOptions.resetColors()
+    Layout.resetColorsDisplay()
 
     document.getElementById("valueShow1").classList.remove("hide")
     
@@ -50,7 +53,7 @@ function genBackground() {
 function genGradient() { 
     ColorOptions.colorIdentify()  
 
-    ColorOptions.resetColors()
+    Layout.resetColorsDisplay()
 
     document.getElementById("valueShow1").classList.remove("hide")
     document.getElementById("valueShow2").classList.remove("hide")
@@ -64,7 +67,7 @@ function genGradient() {
 function genTripleGradient() {
     ColorOptions.colorIdentify()  
      
-    ColorOptions.resetColors()
+    Layout.resetColorsDisplay()
 
     document.getElementById("valueShow1").classList.remove("hide")
     document.getElementById("valueShow2").classList.remove("hide")
@@ -77,4 +80,4 @@ function genTripleGradient() {
     document.body.style.background = "linear-gradient(to right," + hue1 + "," + hue2 + "," + hue3 + ")"
 }
 
-ColorOptions.resetColors()
+Layout.resetColorsDisplay()
