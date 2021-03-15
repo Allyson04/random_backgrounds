@@ -15,18 +15,15 @@ ColorOptions = {
             console.log("#valueShow" + (i+1))
         }
     },
-    colorCreator() {
-        var randomNumber1 = Math.random().toString(16).substr(2, 6)
-        var randomNumber2 = Math.random().toString(16).substr(2, 6)
-        var randomNumber3 = Math.random().toString(16).substr(2, 6)
-        hue1 = "#" + randomNumber1
-        hue2 = "#" + randomNumber2
-        hue3 = "#" + randomNumber3
-    
-        return {hue1, hue2, hue3}
-    
-    }
+    colorIdentify() {
+        let hue = []
 
+        for(i=0; i<3; i++){
+            hue[i] = "#" + Math.random().toString(16).substr(2, 6)
+        }
+    
+        return hue
+    }
 }
 
 // function callLoop() {
@@ -39,7 +36,7 @@ ColorOptions = {
 //document.getElementsByTagName("span").classList.add("hide")
 
 function genBackground() { 
-    ColorOptions.colorCreator()   
+    ColorOptions.colorIdentify()   
 
     ColorOptions.resetColors()
 
@@ -51,7 +48,7 @@ function genBackground() {
 }
 
 function genGradient() { 
-    ColorOptions.colorCreator()  
+    ColorOptions.colorIdentify()  
 
     ColorOptions.resetColors()
 
@@ -65,7 +62,7 @@ function genGradient() {
 }
 
 function genTripleGradient() {
-    ColorOptions.colorCreator()  
+    ColorOptions.colorIdentify()  
      
     ColorOptions.resetColors()
 
