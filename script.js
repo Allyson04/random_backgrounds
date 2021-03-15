@@ -1,3 +1,5 @@
+resetColors()
+
 function changeMode() {
     const GetArrowClass = document.getElementById("arrow").classList
     const GetMainBarClass = document.getElementById("mainBar").classList
@@ -20,14 +22,21 @@ var colorCreator = function () {
 
 }
 
+function resetColors() {
+    for(i=0; i<3;i++){
+        document.querySelector("#valueShow" + (i+1)).classList.add("hide")
+        console.log("#valueShow" + (i+1))
+    }
+}
+
 //document.getElementsByTagName("span").classList.add("hide")
 
 function genBackground() { 
     colorCreator()   
 
+    resetColors()
+
     document.getElementById("valueShow1").classList.remove("hide")
-    document.getElementById("valueShow2").classList.add("hide")
-    document.getElementById("valueShow3").classList.add("hide")
     
     document.getElementById("valueShow1").innerHTML = hue1
     
@@ -35,11 +44,12 @@ function genBackground() {
 }
 
 function genGradient() { 
-    colorCreator()   
+    colorCreator()  
+
+    resetColors()
 
     document.getElementById("valueShow1").classList.remove("hide")
     document.getElementById("valueShow2").classList.remove("hide")
-    document.getElementById("valueShow3").classList.add("hide")
     document.getElementById("valueShow1").innerHTML = hue1
     document.getElementById("valueShow2").innerHTML = hue2
 
@@ -48,7 +58,9 @@ function genGradient() {
 }
 
 function genTripleGradient() {
-    colorCreator()
+    colorCreator()  
+     
+    resetColors()
 
     document.getElementById("valueShow1").classList.remove("hide")
     document.getElementById("valueShow2").classList.remove("hide")
