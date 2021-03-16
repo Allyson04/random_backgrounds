@@ -22,9 +22,14 @@ ColorOptions = {
 
 Layout = {
     resetColorsDisplay() {
-        for(i=1; i<4;i++){
-            document.querySelector("#valueShow" + (i)).classList.add("hide")
-            console.log("#valueShow" + (i))
+        for(i=1; i<=3;i++){
+            document.querySelector("#valueShow" + (i)).style.display = "none"
+        }
+    },
+    setNewColors(numberOfSpans) {
+        for(i=1; i<=numberOfSpans;i++) {
+            document.querySelector("#valueShow" + (i)).style.display = "block"
+            document.querySelector("#valueShow" + (i)).innerHTML = hue[i]
         }
     }
 }
@@ -36,16 +41,11 @@ Layout = {
 //     }
 // }
 
-//document.getElementsByTagName("span").classList.add("hide")
-
 function genBackground() { 
     hue = ColorOptions.colorIdentify()
 
     Layout.resetColorsDisplay()
-
-    document.getElementById("valueShow1").classList.remove("hide")
-    
-    document.getElementById("valueShow1").innerHTML = hue[1]
+    Layout.setNewColors(1)
     
     document.body.style.background = hue[1]
 }
@@ -54,13 +54,9 @@ function genGradient() {
     hue = ColorOptions.colorIdentify()
 
     Layout.resetColorsDisplay()
+    Layout.setNewColors(2)
 
-    document.getElementById("valueShow1").classList.remove("hide")
-    document.getElementById("valueShow2").classList.remove("hide")
-    document.getElementById("valueShow1").innerHTML = hue[1]
-    document.getElementById("valueShow2").innerHTML = hue[2]
-
-    document.body.style.background = "linear-gradient(to right, " + hue1 + ", " + hue2 + ")"
+    document.body.style.background = "linear-gradient(to right, " + hue[1] + ", " + hue[2] + ")"
 
 }
 
@@ -68,17 +64,7 @@ function genTripleGradient() {
     hue = ColorOptions.colorIdentify() 
      
     Layout.resetColorsDisplay()
-
-    document.getElementById("valueShow1").classList.remove("hide")
-    document.getElementById("valueShow2").classList.remove("hide")
-    document.getElementById("valueShow3").classList.remove("hide")
-
-    document.getElementById("valueShow1").innerHTML = hue[1]
-    document.getElementById("valueShow2").innerHTML = hue[2]
-    document.getElementById("valueShow3").innerHTML = hue[3]
+    Layout.setNewColors(3)
 
     document.body.style.background = "linear-gradient(to right," + hue[1] + "," + hue[2] + "," + hue[3] + ")"
-    console.log(hue)
 }
-
-Layout.resetColorsDisplay()
