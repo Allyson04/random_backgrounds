@@ -34,6 +34,11 @@ Layout = {
     }
 }
 
+function RefreshAndSetSpans(numberOfSpans) {
+    Layout.resetColorsDisplay()
+    Layout.setNewColors(numberOfSpans)
+}
+
 // function callLoop() {
 //     for(i=0; i<3;i++){
 //         document.querySelector("#valueShow" + (i+1)).classList.add("hide")
@@ -43,28 +48,19 @@ Layout = {
 
 function genBackground() { 
     hue = ColorOptions.colorIdentify()
-
-    Layout.resetColorsDisplay()
-    Layout.setNewColors(1)
-    
+    RefreshAndSetSpans(1)
     document.body.style.background = hue[1]
 }
 
 function genGradient() { 
     hue = ColorOptions.colorIdentify()
-
-    Layout.resetColorsDisplay()
-    Layout.setNewColors(2)
-
+    RefreshAndSetSpans(2)
     document.body.style.background = "linear-gradient(to right, " + hue[1] + ", " + hue[2] + ")"
 
 }
 
 function genTripleGradient() {
     hue = ColorOptions.colorIdentify() 
-     
-    Layout.resetColorsDisplay()
-    Layout.setNewColors(3)
-
+    RefreshAndSetSpans(3)
     document.body.style.background = "linear-gradient(to right," + hue[1] + "," + hue[2] + "," + hue[3] + ")"
 }
