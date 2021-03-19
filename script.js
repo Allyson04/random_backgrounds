@@ -39,13 +39,6 @@ function RefreshAndSetSpans(numberOfSpans) {
     Layout.setNewColors(numberOfSpans)
 }
 
-// function callLoop() {
-//     for(i=0; i<3;i++){
-//         document.querySelector("#valueShow" + (i+1)).classList.add("hide")
-//         console.log()
-//     }
-// }
-
 function genBackground() { 
     hue = ColorOptions.colorIdentify()
     RefreshAndSetSpans(1)
